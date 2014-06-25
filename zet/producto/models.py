@@ -46,4 +46,3 @@ class StockProducto(models.Model):
 	def __unicode__(self):
 		return "%s | %s" (self.Producto, self.cantidad)
 	
-P
