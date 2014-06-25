@@ -1,0 +1,1 @@
+$("a").tooltip("hide");$(".popover-pop").popover("hide");$("#myCollapsible").collapse({toggle:false});$(".myTabBeauty a").click(function(a){a.preventDefault();$(this).tab("show")});$(".dropdown-toggle").dropdown();$("#wizard").bwizard();

@@ -1,0 +1,180 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>EMPRESA ZET</title>
+		<meta name="author" content="John">
+		<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+		<meta name="description" content="Slick Admin Admin UI">
+		<meta name="keywords" content="Slick Admin, Admin UI, Admin Dashboard, John">
+		<script src="{% static "js/html5-trunk.js" %}"></script>
+		<link href="{% static "icomoon/style.css" %}" rel="stylesheet">
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<link href="{% static "css/main.css" %} " rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<span>Zet</span>
+			</div>
+			<div id="optional-dropdown">
+				<ul>
+					<li>
+						<a href="{% url 'inicio' %}">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe000;" ></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Optional Dropdown end -->
+
+			<!-- Search bar start -->
+			<div class="custom-search hidden-phone">
+				<input type="text" class="search-query">
+				<button> <span class="fs1" aria-hidden="true" data-icon="&#xe07f;"></span></button>
+			</div>	
+			<!-- Search bar end -->
+
+			<!-- Mini navigation start -->
+			<div id="mini-nav" class="hidden-phone">
+				<ul>
+					<li>
+						<a href="{% url 'login_home' %}">
+							<span class="text-label">Jordan Medina</span><span class="fs1" aria-hidden="true" data-icon="&#xe088;"></span>
+						</a>
+						<ul class="user-summary">
+							<li>
+								<div class="summary">
+									<div class="user-pic">
+										<img src="img/avatar-1.png" alt="Slick Admin"/>
+									</div>
+									<div class="basic-details">
+										<h4 class="no-margin">Jordan</h4>
+										<h5 class="no-margin">Programador</h5>
+										<small>Perú, Lima</small>
+									</div>
+									<div class="profile-progress">
+										<div class="chart-progress" data-percent="68">
+											68%
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</li>
+							<li>
+								<button class="btn btn-xs btn-danger pull-right" onclick="location.href='{% url 'logout_home' %}' ">Salir</button>
+								<span class="clearfix"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- Mini navigation end -->
+
+		</header>
+		<!-- Header end -->
+
+		<!-- Main Container start -->
+		<div class="main-container">
+
+			<!-- Mian navigation start -->
+			<div id="mainnav" class="hidden-phone">
+				<ul>
+					{% if groupUser == 'cajero' %}
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'cajero' %}">
+							<div class="icon">
+								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
+							</div>
+							Cajero
+						</a>
+					</li>
+					{% endif %}
+
+					{% if not groupUser == 'cajero' %}
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'jefe_inventario' %}">
+							<div class="icon">
+								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
+							</div>
+							Jefe de Inventario
+						</a>
+					</li>
+					{% endif %}
+					
+					{% if not groupUser == 'cajero' %}
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'cajero' %}">
+							<div class="icon">
+								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
+							</div>
+							Admin
+						</a>
+					</li>
+					{% endif %}
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'estadisticas' %}">
+							<div class="icon">
+								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
+							</div>
+							Estadisticas
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Mian navigation end -->
+			<div class="dashboard-wrapper">
+			{% block contenido %} {% endblock %}
+			</div>
+		
+		</div>
+		<!-- Main Container end -->
+
+
+		<!-- Scripts -->
+
+		<script src="{% static "js/wysiwyg/wysihtml5-0.3.0.js" %}"></script>
+
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
+		<script src="{% static "js/jquery-ui-1.8.23.custom.min.js" %}"></script>
+
+
+		<!-- Flot charts -->
+		<script src="{% static "js/flot/jquery.flot.js" %}"></script>
+		<script src="{% static "js/flot/jquery.flot.resize.min.js" %}"></script>
+		<script src="{% static "js/flot/jquery.flot.tooltip.js" %}"></script>
+
+		<!-- Easy pie charts -->
+		<script src="{% static "js/jquery.easy-pie-chart.js" %}"></script>
+
+		<!-- Tiny Scrollbar JS -->
+		<script src="{% static "js/tiny-scrollbar.js" %}"></script>
+
+		<!-- Sparkline JS -->
+		<script src="{% static "js/jquery.sparkline.js" %}"></script>
+
+		<script src="{% static "js/rating/jquery.raty.js" %}"></script>
+
+		<!-- custom Js -->
+		<script src="{% static "js/custom-index.js" %}"></script>
+
+		<script src="{% static "js/custom.js" %}"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+			$.fn.raty.defaults.path = 'img';
+
+			$('#rate3').raty({ score: 3 });
+			$('#rate5').raty({ score: 5 });
+			$('#rate1').raty({ score: 1 });
+		});
+		</script>
+	</body>
+</html>

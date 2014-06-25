@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "auth.group",
+        "fields": {
+            "name": "administrator",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.group",
+        "fields": {
+            "name": "staff",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.group",
+        "fields": {
+            "name": "owner",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.group",
+        "fields": {
+            "name": "supervisor",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 5,
+        "model": "auth.group",
+        "fields": {
+            "name": "jefe_inventario",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 6,
+        "model": "auth.group",
+        "fields": {
+            "name": "cajero",
+            "permissions": []
+        }
+    },
+    {
+        "pk": 7,
+        "model": "auth.group",
+        "fields": {
+            "name": "guest",
+            "permissions": []
+        }
+    }
+]

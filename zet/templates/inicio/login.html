@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+  <!--[if lt IE 7]>
+    <html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+  <![endif]-->
+
+  <!--[if IE 7]>
+    <html class="lt-ie9 lt-ie8" lang="en">
+  <![endif]-->
+
+  <!--[if IE 8]>
+    <html class="lt-ie9" lang="en">
+  <![endif]-->
+
+  <!--[if gt IE 8]>
+    <!-->
+    <html lang="es">
+    <!--
+  <![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Login Zet</title>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <script src="{% static "js/html5-trunk.js" %}"></script>
+    
+    <link href="{% static "icomoon/style.css" %}" rel="stylesheet">
+    <!--[if lte IE 7]>
+    <script src="{% static "css/icomoon-font/lte-ie7.js" %}"></script>
+    <![endif]-->
+
+    <!-- bootstrap css -->
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body>    
+    <!-- Main Container start -->
+    <div class="main-container">
+      <div class="row">
+        <form action="" class="login-wrapper" method="post">
+        	{% csrf_token %}
+          <div class="header">
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Ingresar al Sistema ZET
+                <!--<img src="img/logo.png" alt="Logo" class="pull-right">-->
+                </h3>
+                <p>Ingrese su usuario para ingresar a ZET.</p>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <input class="input col-md-12 col-sm-12" id="" name="username" placeholder="Usuario" required="required" type="text" value="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <input class="input col-md-12 col-sm-12 password" id="" name="password" placeholder="********" required="required" type="password">
+              </div>
+            </div>
+          </div>
+          <div class="actions">
+            <input type="submit" class="btn btn-danger" value="Ingresar">
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Main Container end -->
+  </body>
+</html>
