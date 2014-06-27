@@ -40,18 +40,24 @@
 			<div id="mini-nav" class="hidden-phone">
 				<ul>
 					<li>
-						<a href="{% url 'login_home' %}">
-							<span class="text-label">Jordan Medina</span><span class="fs1" aria-hidden="true" data-icon="&#xe088;"></span>
+						{% if user.is_authenticated %}
+						<a href="">
+							<span class="text-label">{{user.username}} </span><span class="fs1" aria-hidden="true" data-icon="&#xe088;"></span>
 						</a>
+						{% else %}
+						<a href="{% url 'login_home' %}">
+							<span class="text-label">Iniciar Sesion</span><span class="fs1" aria-hidden="true" data-icon="&#xe088;"></span>
+						</a>
+						{% endif %}
 						<ul class="user-summary">
 							<li>
 								<div class="summary">
 									<div class="user-pic">
-										<img src="img/avatar-1.png" alt="Slick Admin"/>
+										<img src="{% static "img/avatar-1.png" %}" alt="Slick Admin"/>
 									</div>
 									<div class="basic-details">
-										<h4 class="no-margin">Jordan</h4>
-										<h5 class="no-margin">Programador</h5>
+										<h4 class="no-margin">{{user.username}}</h4>
+										<h5 class="no-margin">{{user.groups.all.0}}</h5>
 										<small>Perú, Lima</small>
 									</div>
 									<div class="profile-progress">
@@ -81,7 +87,7 @@
 			<!-- Mian navigation start -->
 			<div id="mainnav" class="hidden-phone">
 				<ul>
-					{% if groupUser == 'cajero' %}
+					{% if user.groups.all.0.name == 'cajero' %}
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
@@ -92,8 +98,6 @@
 						</a>
 					</li>
 					{% endif %}
-
-					{% if not groupUser == 'cajero' %}
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'jefe_inventario' %}">
@@ -103,9 +107,6 @@
 							Jefe de Inventario
 						</a>
 					</li>
-					{% endif %}
-					
-					{% if not groupUser == 'cajero' %}
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
@@ -115,8 +116,6 @@
 							Admin
 						</a>
 					</li>
-					{% endif %}
-
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'estadisticas' %}">
@@ -125,6 +124,21 @@
 							</div>
 							Estadisticas
 						</a>
+					</li>
+					
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="#">Gestion de Proveedor</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="#">Informes</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="#">Reportes</a>
 					</li>
 				</ul>
 			</div>

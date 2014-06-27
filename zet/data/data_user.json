@@ -1,0 +1,58 @@
+[
+	{
+		"pk": 2,
+		"model": "auth.user",
+		"fields": {
+			"username": "admnistrador",
+			"password": "admnistrador"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "auth.user",
+		"fields": {
+			"username": "dueño",
+			"password": "dueño"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "auth.user",
+		"fields": {
+			"username": "gerente_de_tienda",
+			"password": "gerente_de_tienda"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "auth.user",
+		"fields": {
+			"username": "cajero",
+			"password": "cajero"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "auth.user",
+		"fields": {
+			"username": "dueño",
+			"password": "dueño"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "auth.user",
+		"fields": {
+			"username": "jefe_de_inventario",
+			"password": "jefe_de_inventario"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "auth.user",
+		"fields": {
+			"username": "anonimo",
+			"password": "anonimo"
+		}
+	}
+]

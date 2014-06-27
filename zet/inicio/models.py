@@ -38,7 +38,7 @@ class JefeInventario(models.Model):
 		return self.usuario
 
 	class Meta:
-		db_table = "jefe_proyecto"
+		db_table = "jefe_inventario"
 
 		
 

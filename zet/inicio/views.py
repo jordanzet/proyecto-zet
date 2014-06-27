@@ -7,7 +7,7 @@ from django.contrib.auth import login, authenticate, logout
 
 def login_home(request):
 	if not request.user.is_anonymous():
-		groupUser = request.user.groups.all()[0].name
+		roupUser = request.user.groups.all()[0].name
 		if groupUser == 'cajero' :
 			return HttpResponseRedirect('/cajero')
 		elif groupUser == 'jefe_inventario' :

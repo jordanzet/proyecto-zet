@@ -1,0 +1,12 @@
+prodedimiento
+=============
+
+
+ejecutar en consola
+====================
+
+python manage.py syncdb
+python manage.py loaddata data/data_group.json
+python manage.py loaddata data/data_user.json
+python manage.py runserver
+

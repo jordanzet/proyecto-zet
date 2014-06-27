@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "auth.group",
         "fields": {
-            "name": "administrator",
+            "name": "administrador",
             "permissions": []
         }
     },
@@ -11,7 +11,7 @@
         "pk": 2,
         "model": "auth.group",
         "fields": {
-            "name": "staff",
+            "name": "mantenimiento_de_software",
             "permissions": []
         }
     },
@@ -19,7 +19,7 @@
         "pk": 3,
         "model": "auth.group",
         "fields": {
-            "name": "owner",
+            "name": "dueño",
             "permissions": []
         }
     },
@@ -27,7 +27,7 @@
         "pk": 4,
         "model": "auth.group",
         "fields": {
-            "name": "supervisor",
+            "name": "gerente_de_tienda",
             "permissions": []
         }
     },
@@ -35,7 +35,7 @@
         "pk": 5,
         "model": "auth.group",
         "fields": {
-            "name": "jefe_inventario",
+            "name": "jefe_de_inventario",
             "permissions": []
         }
     },
@@ -51,7 +51,7 @@
         "pk": 7,
         "model": "auth.group",
         "fields": {
-            "name": "guest",
+            "name": "cliente",
             "permissions": []
         }
     }
