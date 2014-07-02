@@ -19,6 +19,7 @@ class TipoProducto(models.Model):
 
 class AreaProducto(models.Model):
 	ubicacion = models.CharField(max_length=2)
+	
 	def __unicode__(self):
 		return self.ubicacion
 
@@ -31,8 +32,7 @@ class Producto(models.Model):
 	area_producto = models.ForeignKey(AreaProducto)
 	costo = models.FloatField()
 	precio_unit = models.FloatField()
-	#stock = models.
-	fecha_vencimiento = models.DateTimeField()
+	fecha_vencimiento = models.DateField()
 
 	def __unicode__(self):
 		return self.nombre

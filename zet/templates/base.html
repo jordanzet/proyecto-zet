@@ -80,14 +80,15 @@
 
 		</header>
 		<!-- Header end -->
-
+	
 		<!-- Main Container start -->
 		<div class="main-container">
 
 			<!-- Mian navigation start -->
 			<div id="mainnav" class="hidden-phone">
 				<ul>
-					{% if user.groups.all.0.name == 'cajero' %}
+					<!-- Listasr 	Cajeros -->
+					<!--{% if user.groups.all.0.name == 'cajero' %} 
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
@@ -97,25 +98,78 @@
 							Cajero
 						</a>
 					</li>
-					{% endif %}
+					{% endif %} -->
+
+					<!-- listar Inventario -->
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
-						<a href="{% url 'jefe_inventario' %}">
+						<a href="{% url 'inventario' %}">
 							<div class="icon">
 								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
 							</div>
-							Jefe de Inventario
+							Inventario
 						</a>
 					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'addproducto' %}">Agregar Producto</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'actualizar-producto' %}">Actualizar Stock Producto</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'deleteproducto' %}">Eliminar Producto</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'actualizar-proveedor' %}">Actualizar Proveedor</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'deleteproveedor' %}">Eliminar Proveedor</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="#">Reportes</a>
+					</li>
+					<!-- Fin Inventario -->
+
+					<!-- Listar Cajeros -->
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
 							<div class="icon">
 								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
 							</div>
-							Admin
+							Cajero
 						</a>
 					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'venta_cajero' %}">Realizar Pedido</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="#">Imprimir Comprobante</a>
+					</li>
+					
+					<!-- Fin Cajeros -->
+					
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'estadisticas' %}">
@@ -180,6 +234,7 @@
 		<script src="{% static "js/custom-index.js" %}"></script>
 
 		<script src="{% static "js/custom.js" %}"></script>
+		<script src="{% static "js/chartjs/Chart.js" %}"></script>
 		
 		<script type="text/javascript">
 			$(function() {

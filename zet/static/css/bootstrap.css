@@ -127,6 +127,7 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
+  width: 75%;
 }
 button,
 input {
@@ -1504,6 +1505,10 @@ label {
   display: inline-block;
   margin-bottom: 5px;
   font-weight: bold;
+  width: 20%;
+}
+input[type="text"] {
+  width: 75%;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;

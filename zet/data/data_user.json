@@ -1,4 +1,4 @@
-[
+[	
 	{
 		"pk": 2,
 		"model": "auth.user",
@@ -35,8 +35,8 @@
 		"pk": 6,
 		"model": "auth.user",
 		"fields": {
-			"username": "dueño",
-			"password": "dueño"
+			"username": "dueno",
+			"password": "dueno"
 		}
 	},
 	{

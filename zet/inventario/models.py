@@ -1,25 +1,25 @@
 from django.db import models
-from producto.models import Producto
+from datetime import datetime
 from django.contrib.auth.models import User
 import uuid, os
 
 STATUS = [
-	('activo', 'Activo'),
-	('inactivo', 'Inactivo'),
-	('despedido', 'despedido')
+	('active', 'Activo'),
+	('inactive', 'Inactivo'),
+	('delete', 'Eliminado')
 ]
 
 def get_file_path(instance, filename):
 	ext = filename.split('.')[-1]
 	filename = "%s.%s" % (uuid.uuid4(), ext)
-	return os.path.join('uploads/cajeros/', filename)
+	return os.path.join('uploads/avatar', filename)
 
-class Cajero(models.Model):
+class JefeInventario(models.Model):
 	usuario = models.ForeignKey(User)
 	dni = models.IntegerField()
 	avatar = models.FileField(upload_to=get_file_path, null=True)
 	telefono = models.IntegerField()
-	status = models.CharField(max_length=8, choices=STATUS, default='activo')
+	status = models.CharField(max_length=8, choices=STATUS, default='active')
 
 	def avatar(self):
 		return 'http://localhost:8000/media/%s' %(self.avatar)
@@ -28,19 +28,8 @@ class Cajero(models.Model):
 		return unicode(self.usuario)
 
 	class Meta:
-		db_table = "cajero"
+		db_table = "jefe_inventario"
 
-
-#class PedidoUnitario(models.Model):
-#	cantidad = models.IntegerField()
-#	producto = models.ForeignKey(Producto)
-
-
-
-#class PedidoTotal(models.Model):
-#	cantidad = models.IntegerField()
-#	producto = models.ForeignKey(Producto)
-
-
-
-
+	#class Meta:
+	#	db_table = "jefe_inventario"
+		

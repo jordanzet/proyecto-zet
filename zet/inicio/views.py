@@ -6,15 +6,6 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 
 def login_home(request):
-	if not request.user.is_anonymous():
-		roupUser = request.user.groups.all()[0].name
-		if groupUser == 'cajero' :
-			return HttpResponseRedirect('/cajero')
-		elif groupUser == 'jefe_inventario' :
-			return HttpResponseRedirect('/jefe_inventario')
-		elif groupUser == 'administrator' :
-			return HttpResponseRedirect('/admin')
-
 	if request.method == 'POST':
 		formulario = AuthenticationForm(request.POST)
 		if formulario.is_valid:
@@ -24,13 +15,7 @@ def login_home(request):
 			if user is not None:
 				if user.is_active:
 					login(request, user)
-					groupUser = user.groups.all()[0].name
-					if groupUser == 'cajero' :
-						return HttpResponseRedirect('/cajero')
-					elif groupUser == 'jefe_inventario':
-						return HttpResponseRedirect('/jefe_inventario')
-					elif groupUser == 'administrator':
-						return HttpResponseRedirect('/admin')
+					return HttpResponseRedirect('/')
 
 				else:
 					messages.add_message(request, messages.ERROR, "Datos incorrectos")
@@ -61,17 +46,8 @@ def inicio(request):
 	return render_to_response('inicio/index.html',{'usuario': usuario},
 		context_instance=RequestContext(request))
 
-def cajero(request):
-	usuario = request.user
-	return render_to_response('inicio/cajero.html',{'usuario': usuario},
-		context_instance=RequestContext(request))
 
 def estadisticas(request):
 	usuario = request.user
 	return render_to_response('inicio/estadisticas.html',{'usuario': usuario},
-		context_instance=RequestContext(request))
-
-def jefe_inventario(request):
-	usuario = request.user
-	return render_to_response('inicio/jefe_inventario.html',{'usuario': usuario},
 		context_instance=RequestContext(request))

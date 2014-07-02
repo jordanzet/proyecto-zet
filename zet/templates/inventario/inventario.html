@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+
+      <!-- Dashboard wrapper start -->
+      <div class="dashboard-wrapper">
+
+        <!-- Page title start -->
+        <div class="row page-title">
+          <h2>
+            Productos 
+            <small>
+              <ul>
+                <li>Inicio</li>
+                <li>/</li>
+                <li>Estadisticas</li>
+              </ul>
+            </small>
+          </h2>
+          <ul class="stats hidden-xs">
+            <li class="ruby-red-bg">
+              <span id="currentSale" class="graph">
+                2, 4, 8, 2, 4, 1
+              </span>
+              <div class="details">
+                <span class="big">$8,597</span>
+                <span class="small">Egresos</span>
+              </div>
+            </li>
+            <li class="light-grey-bg">
+              <span id="currentBalance" class="graph">
+                5, 2, 4, 9, 2, 3
+              </span>
+              <div class="details">
+                <span class="big">$21,345</span>
+                <span class="small">Ingresos</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Page title end -->
+
+        <!-- Row start -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="widget">
+              <div class="widget-header">
+                <div class="title">
+                  <span class="fs1" aria-hidden="true" data-icon="&#xe098;"></span> Estadisticas
+                </div>
+              </div>
+              <div class="widget-body">
+                <div id="social-stats" style="height:160px"></div>
+                <hr>
+                <ul class="statistics">
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="jet-blue-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>12,476</strong>
+                    </div>
+                    <span>Lacteos</span>
+                  </li>
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="go-green-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>2289</strong>
+                    </div>
+                    <span>Golosinas</span>
+                  </li>
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="nagpur-orange-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>1679</strong>
+                    </div>
+                    <span>Embutidos</span>
+                  </li>
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="sea-green-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>$45,360</strong>
+                    </div>
+                    <span>Enlatados</span>
+                  </li>
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="light-red-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>649K</strong>
+                    </div>
+                    <span>Alfajores</span>
+                  </li>
+                  <li>
+                    <div class="main-info">
+                      <a href="#" class="light-grey-bg" data-original-title="">
+                        <span class="fs1" aria-hidden="true" data-icon=""></span>
+                      </a>
+                      <strong>36,290+</strong>
+                    </div>
+                    <span>Bebidas</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Row end -->
+      
+      </div>
+      <!-- Dashboard wrapper end -->
+
+{% endblock %}

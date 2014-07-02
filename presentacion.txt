@@ -1,0 +1,44 @@
+Presentacion
+============
+
+
+saludar
+caracteristicas del software
+beneficios del software
+problemas que resuelve
+
+
+* sistema de Inventario, y control eficiente de ventas y reportes de productos,ademas de contar con estadisticas avanzadas para la toma de decisiones, a comparacion con otras, ademas de contar 
+
+- control eficiente de ventas
+	problemas: * 
+- reportes de productos
+- estadisticas avanzadas
+
+
+
+otras:
+	
+
+* grupos de usuarios
+	admin
+	cajero
+	jefe_inventario
+
+* estadisticas avanzadas
+	
+
+
+Palabras clave
+==============
+
+atino
+traductor ladysoft
+gestos
+tono de voz
+miradas
+contexto
+billetera :)
+lenguaje corporal
+
+

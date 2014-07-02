@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from producto.models import Producto
-
+ 
 
 class Compra(models.Model):
 	proveedor = models.CharField(max_length=12)
@@ -39,3 +39,6 @@ class Venta(models.Model):
 
 	def __unicode__(self):
 		return self.cliente
+
+
+
