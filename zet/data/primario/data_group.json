@@ -1,0 +1,58 @@
+[
+	{
+		"pk": 1,
+		"model": "auth.group",
+		"fields": {
+			"name": "administrador",
+			"permissions": []
+		}
+	}, 
+	{
+		"pk": 2,
+		"model": "auth.group",
+		"fields": {
+			"name": "mantenimiento_de_software",
+			"permissions": []
+		}
+	},
+	{
+		"pk": 3,
+		"model": "auth.group",
+		"fields": {
+			"name": "dueño",
+			"permissions": []
+		}
+	},
+	{
+		"pk": 4,
+		"model": "auth.group",
+		"fields": {
+			"name": "gerente_de_tienda",
+			"permissions": []
+		}
+	},
+	{
+		"pk": 5,
+		"model": "auth.group",
+		"fields": {
+			"name": "jefe_de_inventario",
+			"permissions": []
+		}
+	},
+	{
+		"pk": 6,
+		"model": "auth.group",
+		"fields": {
+			"name": "cajero",
+			"permissions": []
+		}
+	},
+	{
+		"pk": 7,
+		"model": "auth.group",
+		"fields": {
+			"name": "cliente",
+			"permissions": []
+		}
+	}
+]

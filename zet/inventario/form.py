@@ -12,4 +12,4 @@ class ProveedorForm(ModelForm):
     class Meta:
         model = Proveedor
     
-		
+														

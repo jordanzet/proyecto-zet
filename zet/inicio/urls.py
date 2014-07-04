@@ -6,5 +6,6 @@ urlpatterns = patterns('',
 	url(r'login', 'inicio.views.login_home', name='login_home'),
 	url(r'salir', 'inicio.views.logout_home', name='logout_home'),
 	url(r'estadisticas', 'inicio.views.estadisticas', name='estadisticas'),
-	#url(r'nosotros','inicio.views.nosotros', name='nosotros'),
+	url(r'clientes','inicio.views.clientes', name='clientes'),
 )
+clientes

@@ -6,7 +6,7 @@
 			"username": "admnistrador",
 			"password": "admnistrador"
 		}
-	},
+	}, 
 	{
 		"pk": 3,
 		"model": "auth.user",

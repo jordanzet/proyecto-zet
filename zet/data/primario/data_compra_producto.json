@@ -1,0 +1,58 @@
+[
+	{
+		"pk": 1,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "leche",
+			"cantidad": "26"
+		}
+	}, 
+	{
+		"pk": 2,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "zanahorias",
+			"cantidad": "27"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "arroz",
+			"cantidad": 256
+		}
+	},
+	{
+		"pk": 4,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "cerveza",
+			"cantidad": 27
+		}
+	},
+	{
+		"pk": 5,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "gaseosas",
+			"cantidad": 245
+		}
+	},
+	{
+		"pk": 6,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "manzanas",
+			"cantidad": 245
+		}
+	},
+	{
+		"pk": 7,
+		"model": "transaccion.pedidoproducto",
+		"fields": {
+			"producto": "galletas",
+			"cantidad": 234
+		}
+	}
+]

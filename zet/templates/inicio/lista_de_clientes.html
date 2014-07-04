@@ -1,0 +1,10 @@
+{% extends 'base2.html' %}
+{% load staticfiles %}
+	
+{% block contenido %}
+	<h3>Lista de Clientes</h3>
+	{% for lista in lista_de_clientes %}
+	{{lista.usuario}}</br>				
+	{% endfor %}
+
+{% endblock %}

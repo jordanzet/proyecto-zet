@@ -13,6 +13,10 @@
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 		<link href="{% static "css/main.css" %} " rel="stylesheet">
 		<link href="{% static "css/c3/c3.css" %} " rel="stylesheet">
+		<script src="{% static "js/c3/d3.v3.min.js" %}"></script>
+		<script src="{% static "js/c3/c3.js" %}"></script>
+		{% block css %}{% endblock %}
+		{% block js %}{% endblock %}
 	</head>
 	<body>
 		<header>
@@ -88,7 +92,19 @@
 			<!-- Mian navigation start -->
 			<div id="mainnav" class="hidden-phone">
 				<ul>
-					{% if user.groups.all.0.name == 'jefe_de_inventario' %} 
+					<!-- Listasr 	Cajeros -->
+					<!--{% if user.groups.all.0.name == 'cajero' %} 
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'cajero' %}">
+							<div class="icon">
+								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
+							</div>
+							Cajero
+						</a>
+					</li>
+					{% endif %} -->
+
 					<!-- listar Inventario -->
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
@@ -119,7 +135,7 @@
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
 					</li>
-
+					
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'actualizar-proveedor' %}">Actualizar Proveedor</a>
@@ -135,10 +151,8 @@
 						<a href="#">Reportes</a>
 					</li>
 					<!-- Fin Inventario -->
-					{% endif %}
-					
+
 					<!-- Listar Cajeros -->
-					{% if user.groups.all.0.name == 'cajero' %}
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
@@ -158,7 +172,7 @@
 						<span class="current-arrow">&nbsp;</span>
 						<a href="#">Imprimir Comprobante</a>
 					</li>
-					{% endif %}
+					
 					<!-- Fin Cajeros -->
 					
 					<li class="active">
@@ -197,12 +211,11 @@
 
 
 		<!-- Scripts -->
-		<script src="{% static "js/c3js/c3.js" %}"></script>
-		<script src="{% static "js/c3js/d3.v3.min.js" %}"></script>
+		
 		<!--<script src="{% static "js/wysiwyg/wysihtml5-0.3.0.js" %}"></script>
 
-		<script src="{% static "js/jquery.min.js" %}"></script> -->
-		<script src="{% static "js/bootstrap.js" %}"></script>
+		<script src="{% static "js/jquery.min.js" %}"></script> 
+		<script src="{% static "js/bootstrap.js" %}"></script>-->
 		<!--<script src="{% static "js/jquery-ui-1.8.23.custom.min.js" %}"></script> -->
 
 
@@ -214,9 +227,9 @@
 		<!-- Easy pie charts
 		<script src="{% static "js/jquery.easy-pie-chart.js" %}"></script>
  -->
-		<!-- Tiny Scrollbar JS -->
+		<!-- Tiny Scrollbar JS 
 		<script src="{% static "js/tiny-scrollbar.js" %}"></script>
-
+-->
 		<!-- Sparkline JS
 		<script src="{% static "js/jquery.sparkline.js" %}"></script>
 
@@ -225,7 +238,7 @@
 		<!-- custom Js 
 		<script src="{% static "js/custom-index.js" %}"></script>
 
-		<script src="{% static "js/custom.js" %}"></script>-->
+		<script src="{% static "js/custom.js" %}"></script>
 		<script src="{% static "js/chartjs/Chart.js" %}"></script>
 		
 		<script type="text/javascript">
@@ -236,6 +249,6 @@
 			$('#rate5').raty({ score: 5 });
 			$('#rate1').raty({ score: 1 });
 		});
-		</script>
+		</script>-->
 	</body>
 </html>

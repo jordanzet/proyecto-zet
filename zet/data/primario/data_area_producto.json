@@ -1,0 +1,93 @@
+[ 	
+	{
+		"pk": 1,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "A1"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "B2"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "C3"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "D4"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "E5"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "F6"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "G7"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "H8"
+		}
+	},
+	{
+		"pk": 9,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "I9"
+		}
+	},
+	{
+		"pk": 10,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "J10"
+		}
+	},
+	{
+		"pk": 11,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "K11"
+		}
+	},
+	{
+		"pk": 12,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "L12"
+		}
+	},
+	{
+		"pk": 13,
+		"model": "producto.areaproducto",
+		"fields": {
+			"ubicacion": "M13"
+		}
+	}	
+]
