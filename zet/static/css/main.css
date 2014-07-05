@@ -106,9 +106,9 @@ header .logo span{color:white}
 #mini-nav{position:relative;padding:0;margin:0 10px 0 0;float:right}
 #mini-nav ul li{float:left;position:relative;-webkit-transition:All .2s ease;-moz-transition:All .2s ease;-ms-transition:All .2s ease;-o-transition:All .2s ease;transition:All .2s ease;margin-left:1px;background:#383838}
 #mini-nav ul li ul{padding:0;position:absolute;top:42px;right:0;width:160px;display:none;opacity:0;visibility:hidden;z-index:100;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}
-#mini-nav ul li ul li{background:#444;display:block;margin-right:0;color:white;float:none;border-bottom:1px solid #4c4c4c;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+#mini-nav ul li ul li{background:#444;display:block;margin-right:0;color:white;float:none;border-bottom:1px solid #4c4c4c;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;height: 80px}
 #mini-nav ul li ul li:hover{background:#373737;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
-#mini-nav ul li ul li:last-child{-webkit-border-radius:0 0 2px 2px;-moz-border-radius:0 0 2px 2px;border-radius:0 0 2px 2px;border-bottom:0}
+#mini-nav ul li ul li:last-child{-webkit-border-radius:0 0 2px 2px;-moz-border-radius:0 0 2px 2px;border-radius:0 0 2px 2px;border-bottom:0;height: 30px}
 #mini-nav ul li ul li:first-child{-webkit-border-radius:2px 0 0 0;-moz-border-radius:2px 0 0 0;border-radius:2px 0 0 0}
 #mini-nav ul li ul li a{font-size:11px;padding:5px 10px}
 #mini-nav ul li ul li a [data-icon]:before{margin-right:5px;line-height:22px}
@@ -117,15 +117,15 @@ header .logo span{color:white}
 #mini-nav ul li:last-child{padding-right:0}
 #mini-nav ul li:hover{-webkit-border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0;border-radius:2px 2px 0 0;background:#444;color:white}
 #mini-nav ul li:hover a{color:white}
-#mini-nav ul li:hover ul{display:block;opacity:1;visibility:visible}
+#mini-nav ul li:hover ul{display:block;opacity:1;visibility:visible;width: 180px;}
 #mini-nav ul li .count-label{position:absolute;top:9px;right:5px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;background:#f74e4d;color:white;height:15px;width:15px;font-size:10px;line-height:15px;text-align:center}
 #mini-nav ul.user-summary{width:310px}
 #mini-nav ul.user-summary a{height:14px;line-height:14px;padding:8px;display:inline-block;min-width:110px;font-size:11px;color:#f7f7f7 !important}
 #mini-nav ul.user-summary a:hover{color:#c4c4c4 !important}
 #mini-nav ul.user-summary .btn{margin:5px}
 #mini-nav .summary{padding:10px}
-#mini-nav .summary .user-pic{float:left;width:60px;margin-right:10px}
-#mini-nav .summary .user-pic img{width:60px;height:60px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
+/*#mini-nav .summary .user-pic{float:left;width:60px;margin-right:10px}
+#mini-nav .summary .user-pic img{width:60px;height:60px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}*/
 #mini-nav .summary .basic-details{width:120px;float:left;margin-right:10px}
 #mini-nav .summary .basic-details h4,#mini-nav .summary .basic-details h5{color:#c4c4c4;line-height:23px;font-weight:100}
 #mini-nav .summary .basic-details small{color:#919191}
@@ -133,7 +133,7 @@ header .logo span{color:white}
 #mini-nav .summary .profile-progress{width:80px;float:left;color:#c4c4c4;text-align:center}
 #mini-nav .summary .profile-progress .easyPieChart{position:relative;margin:auto;font-size:16px;width:80px;height:80px}
 #mini-nav .summary .profile-progress .easyPieChart canvas{position:absolute;top:0;left:0}
-.dashboard-wrapper{padding:30px;position:relative;margin:0 0 10px 90px;background:white;-webkit-border-radius:0 3px 3px 3px;-moz-border-radius:0 3px 3px 3px;border-radius:0 3px 3px 3px;min-height:700px}
+.dashboard-wrapper{padding:15px;position:relative;margin:0 0 10px 90px;background:white;-webkit-border-radius:0 3px 3px 3px;-moz-border-radius:0 3px 3px 3px;border-radius:0 3px 3px 3px;min-height:700px}
 .dashboard-wrapper .plain-header{background:transparent;height:24px;line-height:24px;padding:5px 0}
 .dashboard-wrapper .plain-header h4.title{color:#333;font-size:18px;font-weight:normal;margin:0}
 .dashboard-wrapper .widget{background:white;clear:both;margin-top:0;margin-bottom:30px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}

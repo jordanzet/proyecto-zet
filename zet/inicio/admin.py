@@ -3,10 +3,8 @@ from inicio.models import Cliente
 from actions import export_as_csv
 
 class ClienteAdmin(admin.ModelAdmin):
-	pass
-	#list_display = 
+	list_display = ('id','usuario','ruc','telefono','nivel_de_fidelidad')
+	list_filter = ('usuario',)	
+	actions = [export_as_csv]
 
-
-
-
-admin.site.register(Cliente)
+admin.site.register(Cliente, ClienteAdmin)

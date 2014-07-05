@@ -2,12 +2,12 @@
 {% load staticfiles %}
   
 {% block contenido %}
- 
+
 <div class="col-md-6" >
-	<h2>Agregar Producto</h2>
+	<h2>Agregar Tipo de Productos</h2>
 	<form action="" method="post">
 		{% csrf_token %}
-		{{producto_form.as_p}}
+		{{tipo_producto_form.as_p}}
 		<input type="submit" value="Guardar cambios">
 	</form>	
 </div>
@@ -18,7 +18,7 @@
 			<div class="widget">
 				<div class="widget-header">
 				<div class="title">
-					<span class="fs1" aria-hidden="true" data-icon="&#xe14a;"></span>Lista de Productos
+					<span class="fs1" aria-hidden="true" data-icon="&#xe14a;"></span>Lista de los Tipos de los Productos
 				</div>
 				</div>
 				<div class="widget-body">
@@ -29,22 +29,16 @@
 							<th style="width:5%">#</th>
 							<th style="width:15%">Nombre</th>
 							<th style="width:15%">Descripción</th>
-							<th style="width:15%">Tipo de Producto</th>
-							<th style="width:15%">Precio de Compra</th>
-							<th style="width:15%">Precio de Venta</th>
-							<th style="width:15%">Fecha de Vencimiento</th>
+							<th style="width:15%">Area de Producto</th>
 						</tr>
 					</thead>
 					<tbody>
-						{% for pro in list_producto %}
+						{% for apro in list_tipo_producto %}
 						<tr class="gradeX">
-							<td>{{pro.id}}</td>
-							<td>{{pro.nombre}}</td>
-							<td>{{pro.descripcion}}</td>
-							<td>{{pro.tipo_producto}}</td>
-							<td>{{pro.precio_compra}}</td>
-							<td>{{pro.precio_venta}}</td>
-							<td>{{pro.fecha_vencimiento}}</td>
+							<td>{{apro.id}}</td>
+							<td>{{apro.nombre}}</td>
+							<td>{{apro.descripcion}}</td>
+							<td>{{apro.area_producto}}</td>
 						</tr>
 						{% endfor %}
 					</tbody>

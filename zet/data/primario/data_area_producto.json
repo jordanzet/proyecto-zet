@@ -3,91 +3,108 @@
 		"pk": 1,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "A1"
+			"ubicacion": "A1",
+			"nombre": "Lacteos",
+			"descripcion": "leche y sus derivados"
 		}
 	},
 	{
 		"pk": 2,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "B2"
+			"ubicacion": "B2",
+			"nombre": "Embutidos",
+			"descripcion" : "sssssss"
 		}
 	},
 	{
 		"pk": 3,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "C3"
+			"ubicacion": "C3",
+			"nombre": "Bebidas Gasificadas",
+			"descripcion": "bebidas con gas"
 		}
 	},
 	{
 		"pk": 4,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "D4"
+			"ubicacion": "D4",
+			"nombre": "Bebidas No Gasificadas",
+			"descripcion": "bebidas sin gas"
 		}
 	},
 	{
 		"pk": 5,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "E5"
+			"ubicacion": "E5",
+			"nombre": "Licores",
+			"descripcion": "bebidas alcoholicas"
 		}
 	},
 	{
 		"pk": 6,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "F6"
+			"ubicacion": "F6",
+			"nombre":, "Aceite - Abarrotes"
+			"descripcion": "aceites"
 		}
 	},
 	{
 		"pk": 7,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "G7"
+			"ubicacion": "G7",
+			"nombre":"Menestras - Abarrotes",
+			"descripcion": "menestras"
 		}
 	},
 	{
 		"pk": 8,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "H8"
+			"ubicacion": "H8",
+			"nombre": "Conservas - Abarrotes",
+			"descripcion": "conservas"
 		}
 	},
 	{
 		"pk": 9,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "I9"
+			"ubicacion": "I9",
+			"nombre":"Cremas - Abarrotes",
+			"descripcion": "cremas"
 		}
 	},
 	{
 		"pk": 10,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "J10"
+			"ubicacion": "J10",
+			"nombre": "Condimentos - Abarrotes",
+			"descripcion": "Condimentos"
 		}
 	},
 	{
 		"pk": 11,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "K11"
+			"ubicacion": "K11",
+			"nombre": "Detergentes",
+			"descripcion": "Detergentes"
 		}
 	},
 	{
 		"pk": 12,
 		"model": "producto.areaproducto",
 		"fields": {
-			"ubicacion": "L12"
+			"ubicacion": "L12",
+			"nombre": "Tocador",
+			"descripcion": "Uso de Tocador"
 		}
-	},
-	{
-		"pk": 13,
-		"model": "producto.areaproducto",
-		"fields": {
-			"ubicacion": "M13"
-		}
-	}	
+	}
 ]

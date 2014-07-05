@@ -12,7 +12,8 @@
 		<link href="{% static "icomoon/style.css" %}" rel="stylesheet">
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 		<link href="{% static "css/main.css" %} " rel="stylesheet">
-		<link href="{% static "css/c3/c3.css" %} " rel="stylesheet">
+		<link 	href="{% static "css/c3/c3.css" %} " rel="stylesheet">
+		<script src="js/jquery.dataTables.js"></script>
 	</head>
 	<body>
 		<header>
@@ -53,20 +54,11 @@
 						<ul class="user-summary">
 							<li>
 								<div class="summary">
-									<div class="user-pic">
-										<img src="{% static "img/avatar-1.png" %}" alt="Slick Admin"/>
-									</div>
 									<div class="basic-details">
 										<h4 class="no-margin">{{user.username}}</h4>
 										<h5 class="no-margin">{{user.groups.all.0}}</h5>
 										<small>Perú, Lima</small>
-									</div>
-									<div class="profile-progress">
-										<div class="chart-progress" data-percent="68">
-											68%
-										</div>
-									</div>
-									<div class="clearfix"></div>
+									</div>								
 								</div>
 							</li>
 							<li>
@@ -102,9 +94,28 @@
 
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
+					</li>
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'addproducto' %}">Agregar Producto</a>
 					</li>
 
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-area-producto' %}">Agregar Area de Producto</a>
+					</li>
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-tipo-producto' %}">Agregar Tipo de Producto</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-stock-producto' %}">Agregar Stock de Producto</a>
+					</li>
+					
+					<!--	
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'actualizar-producto' %}">Actualizar Stock Producto</a>
@@ -113,11 +124,6 @@
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'deleteproducto' %}">Eliminar Producto</a>
-					</li>
-
-					<li class="active">
-						<span class="current-arrow">&nbsp;</span>
-						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
 					</li>
 
 					<li class="active">
@@ -133,7 +139,7 @@
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="#">Reportes</a>
-					</li>
+					</li> -->
 					<!-- Fin Inventario -->
 					{% endif %}
 					
@@ -170,12 +176,7 @@
 							Estadisticas
 						</a>
 					</li>
-					
-					<li class="active">
-						<span class="current-arrow">&nbsp;</span>
-						<a href="#">Gestion de Proveedor</a>
-					</li>
-
+					<!--
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="#">Informes</a>
@@ -184,7 +185,7 @@
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="#">Reportes</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<!-- Mian navigation end -->

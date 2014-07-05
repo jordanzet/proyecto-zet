@@ -12,7 +12,7 @@ class ProveedorAdmin(admin.ModelAdmin):
 		
 class TipoProductoAdmin(admin.ModelAdmin):
 	list_display = ('nombre', 'descripcion','area_producto')
-	list_filter = ('nombre', 'area_producto',)
+	list_filter = (	'nombre', 'area_producto',)
 	search_fields = ('nombre','descripcion', 'area_producto__ubicacion',)
 	actions = [export_as_csv]
 

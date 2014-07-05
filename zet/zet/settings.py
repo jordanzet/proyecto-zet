@@ -15,7 +15,6 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
-    #'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,7 +23,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'inicio',
     'producto',
-    'transaccion',
     'inventario',
     'cajero',
 )

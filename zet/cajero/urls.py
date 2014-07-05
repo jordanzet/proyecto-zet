@@ -3,5 +3,4 @@ from cajero.views import venta_cajero
 
 urlpatterns = patterns('',
 	url(r'venta','cajero.views.venta_cajero', name='venta_cajero'),
-	#url(r'nosotros','inicio.views.nosotros', name='nosotros'),
 )

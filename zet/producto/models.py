@@ -2,8 +2,9 @@ from django.db import models
 from datetime import datetime
 
 class Proveedor(models.Model):
-	nombre = models.CharField(max_length=12)
+	nombre = models.CharField(max_length=50)
 	ruc = models.IntegerField()
+	rubro = models.CharField(max_length=50)
 
 	def __unicode__(self):
 		return self.nombre
@@ -11,6 +12,8 @@ class Proveedor(models.Model):
 
 class AreaProducto(models.Model):
 	ubicacion = models.CharField(max_length=2)
+	nombre = models.CharField(max_length=140)
+	descripcion = models.TextField()
 	
 	def __unicode__(self):
 		return self.ubicacion
@@ -41,8 +44,10 @@ class Producto(models.Model):
 class StockProducto(models.Model):
 	producto = models.ForeignKey(Producto)
 	cantidad = models.IntegerField()
+	fecha = models.DateField(auto_now_add=True)
+	hora = models.TimeField(auto_now_add=True)
 
 	def __unicode__(self):
-		return "%s | %s" (self.Producto, self.cantidad)
+		return str(self.cantidad)
 
 

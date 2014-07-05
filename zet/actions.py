@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
-# taken from http://weitlandt.com/theme/2010/05/wir-djangonauten-csv-export-nach-excel-mit-umlauten/
-# + mucho amor de @julian_amaya y @votaguz
-
 import csv
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 from django.template import Context, Template
-
 
 def get_csv_from_dict_list(field_list, data):
 	csv_line = ";".join(['{{ row.%s|addslashes }}' % field for field in field_list])
