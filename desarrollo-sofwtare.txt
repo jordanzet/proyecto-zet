@@ -1,0 +1,133 @@
+PRODUCTOS (codigo, descripcion)
+=========
+
+Nuevo, Modificar y eliminar
+
+*imagen
+
+*promocion
+	(precio, fechadeinicio, fechadefin)
+	pffgggghghgrhgggggggggg
+*existencia
+	(stock, max, min)
+
+*rubor o tipodeproducto
+
+*proveedor 
+
+
+CLIENTE
+=======
+ruc
+rubro
+sitio web
+fecha de creacion
+cumpleaños
+*observaciones 
+imagenes de cliente
+domiciilio
+correo electronnico
+telefono
+telefono adicional
+*tipo de clinete
+	(frecuente o no)
+
+
+PROVEEDORES
+===========
+codigo
+nombre
+telefono
+domicilio
+correo
+ruc
+rubro 
+sitio web
+fecha de creacion
+
+VENDEDORES (CAJEROS)
+====================
+
+codigos, nombres, comision, pago mensual, domicilio, telefono correo,fecha_creacion
+
+
+CAJA
+====
+entrada y salida de dinnero :)
+
+concepto,cajero,entrada, salida, saldo, moneda
+
+
+VENTAS
+======
+
+
+por cajero
+----------
+
+
+
+comprobante
+===========
+
+
+factura o boleta
+lista de precios
+putnonde venta(tienda)
+cliente
+cajero
+empresa
+
+
+calendario
+==========
+
+crear evento
+	nombre_evento
+	ubicacion
+		(mi casa,mi empresa,oficinas del cliente)
+	tipo_evento
+		(capacitacion,conferencia,enviar correo,enviar presupuesto o cotizacioon,llamada de ventas,pago de impuestos,reunion, reunion de ventas, tramite,vacaciones)
+	status del vento(privado o no)
+	fecha de empieza
+	hora de empieza
+	fehca de termino
+	hora de termino
+	recurrencia(semanla, diario, o mensual)
+	descripcion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

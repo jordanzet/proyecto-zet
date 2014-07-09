@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+    <h3>Detergentes Ariel vs. Sapolio   </h3>
+    <div id="chart3"></div>
+
+    <script>
+      var chart3 = c3.generate({
+        bindto: '#chart3',
+        data: {
+          columns: [
+            ['ariel', -300, 350, -300, 0, 0, 0],
+            ['sapolio', -130, -100, 140, -200, 150, -50]
+          ],
+          type: 'area'
+        }
+      });
+
+    </script>
+
+{% endblock	 %}

@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from transaccion.models import PedidoProducto, VentaTotal
+from cajero.models import PedidoProducto, VentaTotal
 
 
 class PedidoProductoForm(ModelForm):

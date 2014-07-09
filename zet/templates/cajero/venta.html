@@ -3,115 +3,50 @@
 
 {% block contenido %}
 
-<h2>Sistema de Ventas- Cajero Jordan</h2>
-	<div class="col-md-12">
-		<div class="widget">
-			<div class="widget-header">
+
+<div class="col-md-6" >
+	<h2>Venta Total de Productos</h2>
+	<form action="" method="post">
+		{% csrf_token %}
+		{{pedido_producto_form.as_p}}
+		<input type="submit" value="Guardar cambios">
+	</form>	
+</div>
+
+<div class="col-md-6" >
+		<div class="row">
+			<div class="col-md-12">
+			<div class="widget">
+				<div class="widget-header">
 				<div class="title">
-					<span class="fs1" aria-hidden="true" data-icon="&#xe04d;"></span>Cliente
+					<span class="fs1" aria-hidden="true" data-icon="&#xe14a;"></span>Lista de las Areas de los Productos
+				</div>
+				</div>
+				<div class="widget-body">
+				<div id="dt_example" class="example_alt_pagination">
+					<table class="table table-condensed table-striped table-hover table-bordered pull-left" id="data-table">    
+					<thead>
+						<tr>
+							<th style="width:5%">#</th>
+							<th style="width:15%">Producto</th>
+							<th style="width:15%">Cantidad</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for apro in list_pedido_producto %}
+						<tr class="gradeX">
+							<td>{{apro.id}}</td>
+							<td>{{apro.producto}}</td>
+							<td>{{apro.cantidad}}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+					</table>
+				</div>
 				</div>
 			</div>
-			
-			<div class="widget-body">
-				<form class="form-horizontal" role="form">
-					<div class="form-group flot">
-						<label class="col-lg-3 control-label">Nombre</label>
-						<div class="col-lg-4">
-							<input type="Text" class="form-control" placeholder="Nombre">
-						</div>
-					</div>
-
-					<div class="form-group flot">
-						<label class="col-lg-3 control-label">RUC</label>
-						<div class="col-lg-4">
-							<input type="Text" class="form-control" placeholder="Ruc">
-						</div>
-					</div>
-					
-					<div class="form-group flot">
-						<label class="col-lg-3 control-label">Email</label>
-						<div class="col-lg-4">
-							<input type="email" class="form-control" placeholder="Email">
-						</div>
-					</div>
-					
-					<div class="form-group flot">
-						<label class="col-lg-3 control-label">Telefono</label>
-						<div class="col-lg-4">
-							<input type="number" class="form-control" placeholder="Telefono">
-						</div>
-					</div>
-					</br>
-				</form>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-12">
-		<div class="widget">
-			<div class="widget-header">
-				<div class="title">
-					<span class="fs1" aria-hidden="true" data-icon="&#xe04d;"></span> Pedido
-				</div>
-			</div>
-			
-			<div class="widget-body">
-				<form class="form-horizontal" role="form">
-					<div class="form-group flot2">
-						<label class="col-lg-4 control-label">Cantidad</label>
-						<div class="col-lg-7">
-							<input type="number" class="form-control" placeholder="cantidad">
-						</div>
-					</div>
-
-					<div class="form-group flot2">
-						<label class="col-lg-4 control-label">Nombre</label>
-						<div class="col-lg-6">
-							<input type="Text" class="form-control" placeholder="Nombre">
-						</div>
-					</div>
-					
-					<div class="form-group flot3">
-						<label class="col-lg-5 control-label">Descripcion</label>
-						<div class="col-lg-8">
-							<input type="Text" class="form-control" placeholder="Descripcion">
-						</div>
-					</div>
-					
-					<div class="form-group flot2">
-						<label class="col-lg-4 control-label">Codigo</label>
-						<div class="col-lg-7">
-							<input type="number" class="form-control" placeholder="Codigo">
-						</div>
-					</div>
-					</br>
-
-					<div class="form-group flot3">
-						<label class="col-lg-4 control-label">Precio</label>
-						<div class="col-lg-8">
-							<input type="number" class="form-control" placeholder="Descripcion">
-						</div>
-					</div>
-					
-					<div class="form-group flot2">
-						<label class="col-lg-4 control-label">Total</label>
-						<div class="col-lg-7">
-							<input type="number" class="form-control" placeholder="Codigo">
-						</div>
-					</div>
-					</br>
-			
-					<div class="form-group flot2">
-						<div class="col-lg-offset-2 col-lg-10">
-							<button type="submit" class="btn btn-success">Agregar Producto</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
+</div>
 	
-</form>
-
 {% endblock %}

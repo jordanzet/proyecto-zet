@@ -7,7 +7,7 @@ STATUS = [
 	('activo', 'Activo'),
 	('inactivo', 'Inactivo'),
 	('despedido', 'despedido')
-] 
+]  
 
 class Cajero(models.Model):
 	usuario = models.ForeignKey(User)

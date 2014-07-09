@@ -5509,6 +5509,8 @@
 			return axis;
 		};
 		axis.tickCentered = function (isCentered) {
+
+
 			if (!arguments.length) { return tickCentered; }
 			tickCentered = isCentered;
 			return axis;

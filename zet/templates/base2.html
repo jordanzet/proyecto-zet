@@ -12,11 +12,9 @@
 		<link href="{% static "icomoon/style.css" %}" rel="stylesheet">
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 		<link href="{% static "css/main.css" %} " rel="stylesheet">
-		<link href="{% static "css/c3/c3.css" %} " rel="stylesheet">
+		<link 	href="{% static "css/c3/c3.css" %} " rel="stylesheet">
 		<script src="{% static "js/c3/d3.v3.min.js" %}"></script>
-		<script src="{% static "js/c3/c3.js" %}"></script>
-		{% block css %}{% endblock %}
-		{% block js %}{% endblock %}
+		<script src="{% static "js/c3/c3.js" %}"></script>	
 	</head>
 	<body>
 		<header>
@@ -47,7 +45,7 @@
 					<li>
 						{% if user.is_authenticated %}
 						<a href="">
-							<span class="text-label">{{user.username}} </span><span class="fs1" aria-hidden="true" data-icon="&#xe088;"></span>
+							<span class="text-label">{{user.username}} </span></span>
 						</a>
 						{% else %}
 						<a href="{% url 'login_home' %}">
@@ -57,20 +55,11 @@
 						<ul class="user-summary">
 							<li>
 								<div class="summary">
-									<div class="user-pic">
-										<img src="{% static "img/avatar-1.png" %}" alt="Slick Admin"/>
-									</div>
 									<div class="basic-details">
 										<h4 class="no-margin">{{user.username}}</h4>
 										<h5 class="no-margin">{{user.groups.all.0}}</h5>
 										<small>Perú, Lima</small>
-									</div>
-									<div class="profile-progress">
-										<div class="chart-progress" data-percent="68">
-											68%
-										</div>
-									</div>
-									<div class="clearfix"></div>
+									</div>								
 								</div>
 							</li>
 							<li>
@@ -92,19 +81,7 @@
 			<!-- Mian navigation start -->
 			<div id="mainnav" class="hidden-phone">
 				<ul>
-					<!-- Listasr 	Cajeros -->
-					<!--{% if user.groups.all.0.name == 'cajero' %} 
-					<li class="active">
-						<span class="current-arrow">&nbsp;</span>
-						<a href="{% url 'cajero' %}">
-							<div class="icon">
-								<span class="fs1" aria-hidden="true" data-icon="&#xe0a2;"></span>
-							</div>
-							Cajero
-						</a>
-					</li>
-					{% endif %} -->
-
+					{% if user.groups.all.0.name == 'jefe_de_inventario' %} 
 					<!-- listar Inventario -->
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
@@ -118,9 +95,28 @@
 
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
+					</li>
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'addproducto' %}">Agregar Producto</a>
 					</li>
 
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-area-producto' %}">Agregar Area de Producto</a>
+					</li>
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-tipo-producto' %}">Agregar Tipo de Producto</a>
+					</li>
+
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'add-stock-producto' %}">Agregar Stock de Producto</a>
+					</li>
+					
+					<!--	
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'actualizar-producto' %}">Actualizar Stock Producto</a>
@@ -131,11 +127,6 @@
 						<a href="{% url 'deleteproducto' %}">Eliminar Producto</a>
 					</li>
 
-					<li class="active">
-						<span class="current-arrow">&nbsp;</span>
-						<a href="{% url 'addproveedor' %}">Agregar Proveedor</a>
-					</li>
-					
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'actualizar-proveedor' %}">Actualizar Proveedor</a>
@@ -149,10 +140,12 @@
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="#">Reportes</a>
-					</li>
+					</li> -->
 					<!-- Fin Inventario -->
-
+					{% endif %}
+					
 					<!-- Listar Cajeros -->
+					{% if user.groups.all.0.name == 'cajero' %}
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
 						<a href="{% url 'cajero' %}">
@@ -168,11 +161,7 @@
 						<a href="{% url 'venta_cajero' %}">Realizar Pedido</a>
 					</li>
 
-					<li class="active">
-						<span class="current-arrow">&nbsp;</span>
-						<a href="#">Imprimir Comprobante</a>
-					</li>
-					
+					{% endif %}
 					<!-- Fin Cajeros -->
 					
 					<li class="active">
@@ -184,20 +173,21 @@
 							Estadisticas
 						</a>
 					</li>
-					
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
-						<a href="#">Gestion de Proveedor</a>
+						<a href="{% url 'es1' %}">Prueba 1</a>
 					</li>
-
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
-						<a href="#">Informes</a>
+						<a href="{% url 'es2' %}">Prueba 2</a>
 					</li>
-
 					<li class="active">
 						<span class="current-arrow">&nbsp;</span>
-						<a href="#">Reportes</a>
+						<a href="{% url 'es3' %}">Prueba 3</a>
+					</li>
+					<li class="active">
+						<span class="current-arrow">&nbsp;</span>
+						<a href="{% url 'es4' %}">Prueba 4</a>
 					</li>
 				</ul>
 			</div>
@@ -209,37 +199,10 @@
 		</div>
 		<!-- Main Container end -->
 
-
 		<!-- Scripts -->
-		
-		<!--<script src="{% static "js/wysiwyg/wysihtml5-0.3.0.js" %}"></script>
-
-		<script src="{% static "js/jquery.min.js" %}"></script> 
-		<script src="{% static "js/bootstrap.js" %}"></script>-->
-		<!--<script src="{% static "js/jquery-ui-1.8.23.custom.min.js" %}"></script> -->
-
-
-		<!-- Flot charts 
-		<script src="{% static "js/flot/jquery.flot.js" %}"></script>
-		<script src="{% static "js/flot/jquery.flot.resize.min.js" %}"></script>
-		<script src="{% static "js/flot/jquery.flot.tooltip.js" %}"></script>
--->
-		<!-- Easy pie charts
-		<script src="{% static "js/jquery.easy-pie-chart.js" %}"></script>
- -->
-		<!-- Tiny Scrollbar JS 
-		<script src="{% static "js/tiny-scrollbar.js" %}"></script>
--->
-		<!-- Sparkline JS
-		<script src="{% static "js/jquery.sparkline.js" %}"></script>
-
-		<script src="{% static "js/rating/jquery.raty.js" %}"></script>
- -->
-		<!-- custom Js 
-		<script src="{% static "js/custom-index.js" %}"></script>
-
-		<script src="{% static "js/custom.js" %}"></script>
-		<script src="{% static "js/chartjs/Chart.js" %}"></script>
+		<script src="{% static "js/c3js/c3.js" %}"></script>
+		<script src="{% static "js/c3js/d3.v3.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
 		
 		<script type="text/javascript">
 			$(function() {
@@ -249,6 +212,6 @@
 			$('#rate5').raty({ score: 5 });
 			$('#rate1').raty({ score: 1 });
 		});
-		</script>-->
+		</script>
 	</body>
 </html>

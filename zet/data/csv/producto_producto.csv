@@ -1,0 +1,7 @@
+Id;nombre;descripcion;proveedor;tipo producto;precio compra;precio venta;fecha vencimiento
+6;En_buc;Enguaje bucal Colgate;COLGATE - PALMOLIVE PERÚ S.A;tocador;4.7;7.2;2015-05-08
+5;Cre_dento;Crema dental ;COLGATE - PALMOLIVE PERÚ S.A;tocador;2.5;3.4;2015-05-01
+4;Ariel;Detergente en polvo;DISTRIBUIDORA CRAS;Detergentes;4.8;6.2;2015-04-03
+3;lavavajillaa;para platos;INTRADEVCO INDUSTRIAL S.A;Detergentes;2.6;3.5;2015-08-10
+2;ambientador;ambientador;INTRADEVCO INDUSTRIAL S.A;Detergentes;5.0;7.0;2014-11-07
+1;sapolio;detergente sapolio;INTRADEVCO INDUSTRIAL S.A;Detergentes;2.5;3.5;2015-01-15

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+<h3>Comparación de productos a través de los dí as</h3>
+<div id="chart"></div>
+
+  <script>
+      var chart = c3.generate({
+        data: {
+          columns: [
+            ['Leche Gloria', 30, 20, 10, 40, 50, 45,53,20,60],
+            ['Leche Ideal', 30, 10, 40, 20, 10, 50,56,25,27]
+          ],
+          types: {
+            data1: 'spline',
+            data2: 'spline'
+          }
+        }
+      });
+    </script>
+
+{% endblock %}

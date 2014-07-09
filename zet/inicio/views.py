@@ -90,26 +90,25 @@ def clientes(request):
 	return render_to_response('inicio/lista_de_clientes.html',{'usuario': usuario,'lista_de_clientes':lista_de_clientes},
 		context_instance=RequestContext(request))
 
+
 def estadistica_clientes(request):
-	pass
+	usuario = request.user
+	return render_to_response('estadistica/es1.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
 
 #estadisticas de ventas del cajero
 def estadistica_ventas_por_fecha(request):
-	pass
+	usuario = request.user
+	return render_to_response('estadistica/es2.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
 
 def estadistica_ventas_cajero(request):
-	pass
+	usuario = request.user
+	return render_to_response('estadistica/es3.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
 
 #estadisticas de compras
 def estadistica_compras(request):
-	pass
-
-#estadisticas de ventas
-def estadistica_ventas_cajero(request):
-	pass
-
-
-
-
-
-
+	usuario = request.user
+	return render_to_response('estadistica/es4.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
