@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+<!-- Page title start -->
+				<div class="row page-title">
+					<h2>
+						Slick Dashboard 
+						<small>
+							<ul>
+								<li>Home</li>
+								<li>/</li>
+								<li>Dashboard</li>
+								<li>/</li>
+								<li>Calendar</li>
+							</ul>
+						</small>
+					</h2>
+					<ul class="stats hidden-xs">
+						<li class="ruby-red-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe042;"></span>
+							<div class="details">
+								<span class="big">Ireland</span>
+								<span class="small">Current Location</span>
+							</div>
+						</li>
+						<li class="light-grey-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe037;"></span>
+							<div class="details">
+								<span class="big">$7589</span>
+								<span class="small">Todays Sale</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Page title end -->
+					
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe045;"></span> Calendar
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id='calendar'></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+{% endblock %}
+
+{% block js %}
+		<script type="text/javascript">
+			// Calendar
+			$(document).ready(function() {
+				var date = new Date();
+				var d = date.getDate();
+				var m = date.getMonth();
+				var y = date.getFullYear();
+				
+				var calendar = $('#calendar').fullCalendar({
+					header: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'month,agendaWeek,agendaDay'
+					},
+					selectable: true,
+					selectHelper: true,
+					select: function(start, end, allDay) {
+						var title = prompt('Event Title:');
+						if (title) {
+							calendar.fullCalendar('renderEvent',
+								{
+									title: title,
+									start: start,
+									end: end,
+									allDay: allDay
+								},
+								true // make the event "stick"
+							);
+						}
+						calendar.fullCalendar('unselect');
+					},
+					editable: true,
+					events: [
+						{
+							title: 'All Day Event',
+							start: new Date(y, m, 1)
+						},
+						{
+							id: 999,
+							title: 'Repeating Event',
+							start: new Date(y, m, d-3, 16, 0),
+							allDay: false
+						},
+						{
+							title: 'Meeting',
+							start: new Date(y, m, d, 10, 30),
+							allDay: false
+						},
+						{
+							title: 'Lunch',
+							start: new Date(y, m, d, 12, 0),
+							end: new Date(y, m, d, 14, 0),
+							allDay: false
+						},
+						{
+							title: 'Birthday Party',
+							start: new Date(y, m, d+1, 19, 0),
+							end: new Date(y, m, d+1, 22, 30),
+							allDay: false
+						}
+					]
+				});
+			});
+		</script>
+{% endblock %}
+

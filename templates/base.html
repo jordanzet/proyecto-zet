@@ -12,6 +12,7 @@
 		<link href="{% static "icomoon/style.css" %}" rel="stylesheet">
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 		<link href="{% static "css/main.css" %} " rel="stylesheet">
+		<link href="{% static "css/fullcalendar.css" %} " rel="stylesheet">
 		<link 	href="{% static "css/c3/c3.css" %} " rel="stylesheet">
 		<script src="{% static "js/c3/d3.v3.min.js" %}"></script>
 		<script src="{% static "js/c3/c3.js" %}"></script>	
@@ -200,10 +201,18 @@
 		<!-- Main Container end -->
 
 		<!-- Scripts -->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
+		<script src="{% static "js/jquery-ui-1.8.23.custom.min.js" %}"></script>
+		<script src="{% static "js/jquery.easy-pie-chart.js" %}"></script>
+		<script src="{% static "js/custom.js" %}"></script>
+		<script src="{% static "js/fullcalendar.js" %}"></script>
+		
+
 		<script src="{% static "js/c3js/c3.js" %}"></script>
 		<script src="{% static "js/c3js/d3.v3.min.js" %}"></script>
 		<script src="{% static "js/bootstrap.js" %}"></script>
-		
+		{% block js %} {% endblock %}
 		<script type="text/javascript">
 			$(function() {
 			$.fn.raty.defaults.path = 'img';

@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+				<div class="row page-title">
+					<h2>
+						Slick Dashboard 
+						<small>
+							<ul>
+								<li>Home</li>
+								<li>/</li>
+								<li>Dashboard</li>
+								<li>/</li>
+								<li>Charts</li>
+							</ul>
+						</small>
+					</h2>
+					<ul class="stats hidden-xs">
+						<li class="ruby-red-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe042;"></span>
+							<div class="details">
+								<span class="big">Ireland</span>
+								<span class="small">Current Location</span>
+							</div>
+						</li>
+						<li class="light-grey-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe037;"></span>
+							<div class="details">
+								<span class="big">$7589</span>
+								<span class="small">Todays Sale</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Page title end -->
+				
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe045;"></span> Google Map
+								</div>
+							</div>
+							<div id="map-canvas" style="width: 100%; height: 300px;"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-8">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe097;"></span> Column Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="column_chart"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe095;"></span> Pie Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="pie_chart">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe096;"></span> Line Graph
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="line_chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe08d;"></span> Candlestick Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="candlestick_chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe13c;"></span> Bubble Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="bubble_chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe096;"></span> Area Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="area_chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="widget-header">
+								<div class="title">
+									<span class="fs1" aria-hidden="true" data-icon="&#xe14a;"></span> Table Chart
+								</div>
+							</div>
+							<div class="widget-body">
+								<div id="table_chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+{% endblock %}
+
+
+{% block js %}
+	<!-- Google Visualization JS -->
+<script src="{% static "js/google-graphs/jsapi.js" %}"></script>
+<script src="{% static "js/google-graphs/maps-api.js" %}"></script>
+<script src="{% static "js/custom-graphs.js" %}"></script>
+
+		<!-- custom Js -->
+		<script src=""></script>
+		<script type="text/javascript">
+			var map;
+				function initialize() {
+					var mapOptions = {
+						zoom: 3,
+						center: new google.maps.LatLng(14.397, 60.644),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+
+					map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);
+				};
+
+				google.maps.event.addDomListener(window, 'load', initialize);
+
+		</script>
+{% endblock %}

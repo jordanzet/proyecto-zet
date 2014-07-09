@@ -112,3 +112,47 @@ def estadistica_compras(request):
 	usuario = request.user
 	return render_to_response('estadistica/es4.html',{'usuario': usuario},
 		context_instance=RequestContext(request))
+
+
+
+
+
+def calendario(request):
+	usuario = request.user
+	return render_to_response('inicio/calendario.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
+
+def perfil(request):
+	usuario = request.user
+	return render_to_response('inicio/perfil.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
+
+
+def esta(request):
+	usuario = request.user
+	return render_to_response('inicio/esta.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
+
+def galeria(request):
+	usuario = request.user
+	return render_to_response('inicio/galeria.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
+
+
+def mensajes(request):
+	usuario = request.user
+	return render_to_response('inicio/mensajes.html',{'usuario': usuario},
+		context_instance=RequestContext(request))	
+
+
+
+def tablas(request):
+	usuario = request.user
+	return render_to_response('inicio/tablas.html',{'usuario': usuario},
+		context_instance=RequestContext(request))
+
+
+def invoice(request):
+	usuario = request.user
+	return render_to_response('inicio/invoice.html',{'usuario': usuario},
+		context_instance=RequestContext(request))		

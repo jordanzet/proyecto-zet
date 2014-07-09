@@ -29,6 +29,11 @@ listas:
 * reportes(estadisticas)
 
 
+usuarios creados
+================
+* user : jordan / pass : jordan / grupo : cajero
+* user : zuly / pass :zuly / grupo ; jefe_de_inventario 
+* user : evelyn / pass : evelyn / grupo : dueño
 
 
 

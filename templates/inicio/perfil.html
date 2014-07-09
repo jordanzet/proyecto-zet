@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  
+{% block contenido %}
+			<div class="dashboard-wrapper">
+
+				<!-- Page title start -->
+				<div class="row page-title">
+					<h2>
+						Slick Dashboard 
+						<small>
+							<ul>
+								<li>Home</li>
+								<li>/</li>
+								<li>Dashboard</li>
+								<li>/</li>
+								<li>Charts</li>
+							</ul>
+						</small>
+					</h2>
+					<ul class="stats hidden-xs">
+						<li class="ruby-red-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe042;"></span>
+							<div class="details">
+								<span class="big">Ireland</span>
+								<span class="small">Current Location</span>
+							</div>
+						</li>
+						<li class="light-grey-bg">
+							<span class="fs1" aria-hidden="true" data-icon="&#xe037;"></span>
+							<div class="details">
+								<span class="big">$7589</span>
+								<span class="small">Todays Sale</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Page title end -->
+				
+				<!-- Row start -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="widget no-margin">
+								<div class="widget-header">
+									<div class="title">
+										<span class="fs1" aria-hidden="true" data-icon="&#xe075;"></span> Edit Profile
+									</div>
+								</div>
+								<div class="widget-body">
+									<div class="row">
+										<div class="col-md-2 col-sm-3">
+											<div class="thumbnail">
+												<img alt="300x200" src="http://bit.ly/1dqW8yO" />
+											</div>
+										</div>
+										<div class="col-md-10 col-sm-9">
+											<form class="form-horizontal">
+												<h3 class="heading-a">General</h3>
+												<div class="form-group">
+													<label for="userName" class="col-sm-2 control-label">User Name</label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control" id="userName" placeholder="Username">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">Name</label>
+													<div class="col-sm-5">
+														<input type="text" class="form-control" placeholder="First Name">
+													</div>
+													<div class="col-sm-5">
+														<input type="text" class="form-control" placeholder="Last Name">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="birthDate" class="col-sm-2 control-label">Birth Date</label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control" id="birthDate" value="28/10/1983" disabled>
+													</div>
+												</div>
+												
+												<h3 class="heading-a">Contact info</h3>
+												<div class="form-group">
+													<label for="emilId" class="col-sm-2 control-label">Email</label>
+													<div class="col-sm-10">
+														<input type="email" class="form-control" id="emilId" value="srinu.basava@gmail.com">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="phone" class="col-sm-2 control-label">Phone</label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control" id="phone" value="(+00) 123 456 789">
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label for="skypeId" class="col-sm-2 control-label">Skype ID</label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control" id="skypeId" value="srinu.basava">
+													</div>
+												</div>
+												
+												<h3 class="heading-a">About</h3>
+												<div class="form-group">
+													<label for="aboutMe" class="col-sm-2 control-label">About me</label>
+													<div class="col-sm-10">
+														<textarea name="aboutMe" id="aboutMe" cols="30" rows="4" class="form-control">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+														</textarea>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">Gender</label>
+													<div class="col-sm-10">
+														<label class="radio-inline">
+															<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Male
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Female
+														</label>
+													</div>
+												</div>
+
+												<div class="form_submit clearfix" style="">
+													<div class="row">
+														<div class="col-sm-10 col-sm-offset-2">
+															<button class="btn btn-primary btn-lg">Save</button>
+														</div>
+													</div>
+												</div>
+												
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row end -->
+
+			</div>
+
+
+{% endblock %}
